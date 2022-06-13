@@ -10,8 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Farfasha">
         <activity
+            android:name=".fruit_game"
+            android:exported="true" />
+        <activity
             android:name=".splash_screen"
-            android:exported="true" >
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -20,8 +23,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true"/>
-
+            android:exported="true" />
     </application>
 
 </manifest>

@@ -4,6 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/programming/Farfasha2/app/src/main/res/drawable/ic_btn.xml" value="0.536" />
+        <entry key="..\:/programming/Farfasha2/app/src/main/res/drawable/viewbg.xml" value="0.2462962962962963" />
+        <entry key="..\:/programming/Farfasha2/app/src/main/res/layout/activity_fruit_game.xml" value="0.152" />
         <entry key="..\:/programming/Farfasha2/app/src/main/res/layout/activity_main.xml" value="0.4" />
         <entry key="..\:/programming/Farfasha2/app/src/main/res/layout/activity_splash_screen.xml" value="0.1793478260869565" />
       </map>
