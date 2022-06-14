@@ -21,6 +21,7 @@ public class fruit_game extends AppCompatActivity {
     ImageView photo;
     List<questions> questions;
     int answersize = 0;
+    String correct_answer[]=null;
     private MediaPlayer mp1, mp2, mp3, mp4, mp5, mp6, mp7;
     boolean answer_isfull1, answer_isfull2, answer_isfull3, answer_isfull4, answer_isfull5, answer_isfull6, answer_isfull7;
     int clickedtime = 0;
@@ -44,6 +45,9 @@ public class fruit_game extends AppCompatActivity {
             photo.setImageResource(q.getQuestion_image());
             answersize = q.getCorrect_answer().length();
             tv_answersize(answersize);
+            for (int i =0; i<=q.getCorrect_answer().length();i++){
+                correct_answer[i]+=q.getCorrect_answer().indexOf(i);
+            }
             btn_answersting_onclick(btn_answer1);
             btn_answersting_onclick(btn_answer2);
             btn_answersting_onclick(btn_answer3);
@@ -86,6 +90,7 @@ public class fruit_game extends AppCompatActivity {
         btn_answer12 = findViewById(R.id.btn_answer12);
         btn_answer13 = findViewById(R.id.btn_answer13);
         btn_answer14 = findViewById(R.id.btn_answer14);
+        //Audio
         mp1 = MediaPlayer.create(this, R.raw.a1);
         mp2 = MediaPlayer.create(this, R.raw.a2);
         mp3 = MediaPlayer.create(this, R.raw.a3);
@@ -93,6 +98,7 @@ public class fruit_game extends AppCompatActivity {
         mp5 = MediaPlayer.create(this, R.raw.a5);
         mp6 = MediaPlayer.create(this, R.raw.a6);
         mp7 = MediaPlayer.create(this, R.raw.a7);
+        //Boolean
         answer_isfull1 = false;
         answer_isfull2 = false;
         answer_isfull3 = false;
@@ -100,6 +106,7 @@ public class fruit_game extends AppCompatActivity {
         answer_isfull5 = false;
         answer_isfull6 = false;
         answer_isfull7 = false;
+//array correct answers
 
     }
 
