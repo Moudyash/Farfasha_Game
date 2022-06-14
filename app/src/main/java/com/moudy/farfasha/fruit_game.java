@@ -21,7 +21,7 @@ public class fruit_game extends AppCompatActivity {
     ImageView photo;
     List<questions> questions;
     int answersize = 0;
-    String correct_answer[]=null;
+    char[] ch ;
     private MediaPlayer mp1, mp2, mp3, mp4, mp5, mp6, mp7;
     boolean answer_isfull1, answer_isfull2, answer_isfull3, answer_isfull4, answer_isfull5, answer_isfull6, answer_isfull7;
     int clickedtime = 0;
@@ -35,7 +35,7 @@ public class fruit_game extends AppCompatActivity {
 
         photo = findViewById(R.id.photo);
         questions = new ArrayList<>();
-        questions.add(new questions(1, R.drawable.banana, "ما اسم الفاكهة", "adserty"));
+        questions.add(new questions(1, R.drawable.banana, "ما اسم الفاكهة", "موز"));
         btn_answersting("ق", "ض", "ر", "س", "ز", "ع", "و", "خ", "ب", "ش", "ط", "ا", "ل", "م");
         Iterator itr = questions.iterator();
         //traversing elements of ArrayList object
@@ -44,10 +44,13 @@ public class fruit_game extends AppCompatActivity {
             tv_questions.setText(q.getQuestion());
             photo.setImageResource(q.getQuestion_image());
             answersize = q.getCorrect_answer().length();
-            tv_answersize(answersize);
-            for (int i =0; i<=q.getCorrect_answer().length();i++){
-                correct_answer[i]+=q.getCorrect_answer().indexOf(i);
+            ch= new char[answersize];
+
+            for (int i = 0; i <answersize; i++) {
+                ch[i] = q.getCorrect_answer().charAt(i);
+
             }
+
             btn_answersting_onclick(btn_answer1);
             btn_answersting_onclick(btn_answer2);
             btn_answersting_onclick(btn_answer3);
@@ -107,7 +110,6 @@ public class fruit_game extends AppCompatActivity {
         answer_isfull6 = false;
         answer_isfull7 = false;
 //array correct answers
-
     }
 
     public void btn_answersting(String s1, String s2, String s3, String s4, String s5, String s6,
@@ -139,6 +141,8 @@ public class fruit_game extends AppCompatActivity {
                         answer_isfull4 == false && answer_isfull5 == false && answer_isfull6 == false && answer_isfull7 == false) {
                     answer_isfull1 = true;
                     tv_answer1.setText(btn.getText().toString());
+
+
                     btn.setVisibility(View.INVISIBLE);
 
                 } else if (answer_isfull1 == true && answer_isfull2 == false && answer_isfull3 == false &&
@@ -179,20 +183,7 @@ public class fruit_game extends AppCompatActivity {
                     tv_answer7.setText(btn.getText().toString());
 
                 }
-//                if (tv_answer1.getText()==" "){
-//                }else{
-//                    tv_answer1.setText(btn.getText().toString());
-//
-//                }
-//                if (tv_answer2.getText()==" "){
-//                }else{
-//                    tv_answer2.setText(btn.getText().toString());
-//
-//                }
-//                if (tv_answer3.getText()==" "){
-//                } if (tv_answer4.getText()==" "){
-//                    tv_answer4.setText(btn.getText().toString());
-//                }
+
                 switch (clickedtime) {
                     case 0:
                         mp1.start();
