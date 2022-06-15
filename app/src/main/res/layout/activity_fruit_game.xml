@@ -53,6 +53,8 @@ android:gravity="center"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_horizontal">
+
+
         <TextView
             android:id="@+id/tv_answer7"
             android:layout_width="wrap_content"
