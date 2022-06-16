@@ -40,7 +40,7 @@ public class fruit_game extends AppCompatActivity {
         questions = new ArrayList<>();
         btn_answersting("م", "ؤ", "ر", "س", "ز", "ع", "و", "خ", "ب", "ش", "ط", "ا", "ل", "ق");
 
-        addquestions(1, R.drawable.banana, "ما اسم الفاكهة", "موز");
+        addquestions(1, R.drawable.banana, "ما اسم الفاكهة", "موزق");
     }
 
     //to add questions
@@ -77,6 +77,10 @@ public class fruit_game extends AppCompatActivity {
             btn_answersting_onclick(btn_answer14, answersize, answer);
             tvanswer_onclick(tv_answer1);
             tvanswer_onclick(tv_answer2);
+            tvanswer_onclick(tv_answer3);
+            tvanswer_onclick(tv_answer4);
+            tvanswer_onclick(tv_answer5);
+            tvanswer_onclick(tv_answer6);
 
         }
 
@@ -89,10 +93,28 @@ public class fruit_game extends AppCompatActivity {
             public void onClick(View v) {
                 String current_tv_text= tv.getText().toString();
                 tv.setText(" ");
+
                 if (btn_answer1.getText().toString().equals(current_tv_text)){
                     answer_isfull1 = false;
-
                     btn_answer1.setVisibility(View.VISIBLE);
+                }else if (btn_answer2.getText().toString().equals(current_tv_text)){
+                    answer_isfull2 = false;
+                    btn_answer2.setVisibility(View.VISIBLE);
+                }else if (btn_answer3.getText().toString().equals(current_tv_text)){
+                    answer_isfull3 = false;
+                    btn_answer3.setVisibility(View.VISIBLE);
+                }else if (btn_answer4.getText().toString().equals(current_tv_text)){
+                    answer_isfull4 = false;
+
+                    btn_answer4.setVisibility(View.VISIBLE);
+                }else if (btn_answer5.getText().toString().equals(current_tv_text)){
+                    answer_isfull5 = false;
+
+                    btn_answer5.setVisibility(View.VISIBLE);
+                }else if (btn_answer6.getText().toString().equals(current_tv_text)){
+                    answer_isfull6 = false;
+
+                    btn_answer6.setVisibility(View.VISIBLE);
                 }
             }
         });
@@ -546,6 +568,7 @@ public class fruit_game extends AppCompatActivity {
                     }
 
                 }
+
 
                 switch (clickedtime) {
                     case 0:
